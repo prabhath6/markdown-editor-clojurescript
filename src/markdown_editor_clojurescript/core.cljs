@@ -1,12 +1,17 @@
 (ns markdown-editor-clojurescript.core
     (:require
-      [reagent.core :as r]))
+     [reagent.core :as r]
+     [markdown-editor-clojurescript.markdown-structure :as ms]))
 
 ;; -------------------------
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Welcome to Reagent"]])
+   [:div.hero-body
+    [:div.container
+     [:h1.title.has-text-centered.has-text-white-ter "Markdown Editor"]
+     [:h2.subtitle.has-text-white-bis "Start Typing...."]
+     [ms/markdown-structure]]])
 
 ;; -------------------------
 ;; Initialize app
