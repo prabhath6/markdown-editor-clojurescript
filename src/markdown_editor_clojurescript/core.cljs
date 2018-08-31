@@ -9,7 +9,7 @@
 (defn home-page []
    [:div.hero-body
     [:div.container
-     [:h1.title.has-text-centered.has-text-white-ter "Markdown Editor"]
+     [:h1.title.has-text-centered.has-text-white-ter "ClojureScript Markdown Editor"]
      [:h2.subtitle.has-text-white-bis "Start Typing...."]
      [ms/markdown-structure]]])
 
