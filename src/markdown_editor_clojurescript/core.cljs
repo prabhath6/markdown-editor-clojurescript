@@ -1,7 +1,8 @@
 (ns markdown-editor-clojurescript.core
     (:require
      [reagent.core :as r]
-     [markdown-editor-clojurescript.markdown-structure :as ms]))
+     [markdown-editor-clojurescript.markdown-structure :as ms]
+     [markdown-editor-clojurescript.markdown-rendered :as mr]))
 
 ;; -------------------------
 ;; Views
@@ -21,7 +22,8 @@
      [:h1.title.has-text-centered.has-text-white-ter "ClojureScript Markdown Editor"]
      [:h2.subtitle.has-text-white-bis "Start Typing...."]
      [ms/markdown-structure]
-     [:div {:dangerouslySetInnerHTML {:__html (t)}}]]])
+     [:div {:dangerouslySetInnerHTML {:__html (t)}}]
+     [mr/markdown-test]]])
 
 ;; -------------------------
 ;; Initialize app

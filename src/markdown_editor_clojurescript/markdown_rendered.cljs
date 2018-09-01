@@ -10,3 +10,8 @@
                          :readOnly true
                          :value [:strong "test"]}]]])
 
+(defn markdown-test []
+  [:div.column.is-half
+   [:div {:contentEditable true
+          :dangerouslySetInnerHTML {:__html (js/marked @st/raw-content)}}]])
+
