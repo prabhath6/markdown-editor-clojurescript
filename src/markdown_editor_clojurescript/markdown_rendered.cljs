@@ -6,6 +6,7 @@
    [:div.control
     [:textarea.textarea {:rows "30"
                          :name "raw content"
+                         :contentEditable true
                          :readOnly true
-                         :value @st/raw-content}]]])
+                         :value [:strong "test"]}]]])
 
