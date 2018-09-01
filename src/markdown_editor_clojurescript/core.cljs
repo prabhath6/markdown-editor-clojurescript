@@ -12,7 +12,6 @@
                                       :breaks false
                                       :sanitize true
                                       })]
-    (prn sss)
    (js/marked "### t3st" #js {:sanitize true})))
 
 (defn home-page []
@@ -21,9 +20,7 @@
     [:div.container
      [:h1.title.has-text-centered.has-text-white-ter "ClojureScript Markdown Editor"]
      [:h2.subtitle.has-text-white-bis "Start Typing...."]
-     [ms/markdown-structure]
-     [:div {:dangerouslySetInnerHTML {:__html (t)}}]
-     [mr/markdown-test]]])
+     [ms/markdown-structure]]])
 
 ;; -------------------------
 ;; Initialize app
