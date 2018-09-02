@@ -1,20 +1,16 @@
 (ns markdown-editor-clojurescript.markdown-rendered
   (:require [markdown-editor-clojurescript.state :as st]))
 
-(defn tt [code]
-  (.-value (js/hljs.highlightAuto code)))
-
 (defn markdown-rendered []
-  (.setOptions js/marked #js {:gfm true
+  (.setOptions js/marked #js {:renderer (.Renderer js/marked)
+                              :gfm true
                               :tables true
                               :breaks false
                               :sanitize true
                               :pedantic false
                               :smartLists true
-                              :martypants true
-                              :highlight (partial tt)}) ;;TODO: complete highlight
+                              :martypants true})
   [:div.column.is-half
    [:div.card {:style {:height "740px" :overflow "auto"}}
-    [:div.content {:style {:margin-left "15px"}
+    [:div.content {:style {:margin-left "18px"}
                    :dangerouslySetInnerHTML {:__html (js/marked @st/raw-content {:sanitize true})}}]]])
-

@@ -1,21 +1,12 @@
 (ns markdown-editor-clojurescript.core
     (:require
      [reagent.core :as r]
-     [markdown-editor-clojurescript.markdown-structure :as ms]
-     [markdown-editor-clojurescript.markdown-rendered :as mr]))
+     [markdown-editor-clojurescript.markdown-structure :as ms]))
 
 ;; -------------------------
 ;; Views
-(defn t []
-  (let [sss (.setOptions js/marked #js {:gfm true
-                                      :tables true
-                                      :breaks false
-                                      :sanitize true
-                                      })]
-   (js/marked "### t3st" #js {:sanitize true})))
 
 (defn home-page []
-  (t)
    [:div.hero-body
     [:div.container
      [:h1.title.has-text-centered.has-text-white-ter "ClojureScript Markdown Editor"]
