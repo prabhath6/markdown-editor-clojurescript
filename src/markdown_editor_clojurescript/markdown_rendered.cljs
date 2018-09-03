@@ -11,6 +11,6 @@
                               :smartLists true
                               :martypants true})
   [:div.column.is-half
-   [:div.card {:style {:height "740px" :overflow "auto"}}
+   [:div.card {:style {:height "755px" :overflow "auto"}}
     [:div.content {:style {:margin-left "18px"}
                    :dangerouslySetInnerHTML {:__html (js/marked @st/raw-content {:sanitize true})}}]]])

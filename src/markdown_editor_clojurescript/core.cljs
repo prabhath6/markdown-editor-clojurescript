@@ -1,7 +1,8 @@
 (ns markdown-editor-clojurescript.core
     (:require
      [reagent.core :as r]
-     [markdown-editor-clojurescript.markdown-structure :as ms]))
+     [markdown-editor-clojurescript.markdown-structure :as ms]
+     [markdown-editor-clojurescript.made-with-bulma :as mb]))
 
 ;; -------------------------
 ;; Views
@@ -11,7 +12,9 @@
     [:div.container
      [:h1.title.has-text-centered.has-text-white-ter "ClojureScript Markdown Editor"]
      [:h2.subtitle.has-text-white-bis "Start Typing...."]
-     [ms/markdown-structure]]])
+     [ms/markdown-structure]]
+    [:br]
+    [mb/made-with-bulma]])
 
 ;; -------------------------
 ;; Initialize app
